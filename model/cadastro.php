@@ -65,7 +65,16 @@ class Cadastro extends Banco {
     }
 
     public function incluir(){
-        return $this->setConsulta($this->getEmail(),$this->getEndereco(),$this->getBairro(),$this->getCEP(),$this->getCidade(),$this->getSenha(),$this->getEstado());
+        return $this->setAgendamentos($this->getEmail(),$this->getEndereco(),$this->getBairro(),$this->getCEP(),$this->getCidade(),$this->getSenha(),$this->getEstado());
+    }
+    public function listar($id){
+        return $this->getAgendamentos($id);
+    }
+    public function editar(){
+        return $this->uptadeAgendamentos($this->getId(),$this->getEmail(),$this->getEndereco(),$this->getBairro(),$this->getCEP(),$this->getCidade(),$this->getSenha(),$this->getEstado());
+    }
+    public function excluir($id){
+        return $this->deleteConsulta($id);
     }
 
 }

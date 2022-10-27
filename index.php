@@ -20,7 +20,7 @@
                 <nav class="navbar bg-light">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">
-                        <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                        <img src="img/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
                         Sistema Web 2.0
 </a>
 </div>
@@ -28,7 +28,7 @@
 </div>
 <div class="row">
     <div class="col">
-    <nav class="navbar navbar-expand-lg bg-dark">
+    <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,7 @@
 </div>
 <div class="row">
     <div class="col">
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-light" style="background-color: #8d5ba4;">
   <div class="container-fluid">
   <nav class="navbar-brand">Cadastro de Usuários</span>
 </div>
@@ -97,7 +97,6 @@
       <option>MA</option>
       <option>MT</option>
       <option>MS</option>
-      <option>MS</option>
       <option>MG</option>
       <option>PA</option>
       <option>PB</option>
@@ -116,16 +115,16 @@
       <option>DF</option>
     </select>
   </div>
-  <div class="col-12">
+ <!--<div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="gridCheck">
       <label class="form-check-label" for="gridCheck">
         Check me out
       </label>
     </div>
-  </div>
+  </div>-->
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary" style="background-color: #8d5ba4">Sign in</button>
   </div>
 </form>
          </div>

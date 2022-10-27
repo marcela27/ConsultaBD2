@@ -1,3 +1,6 @@
+<?php
+require_once("controller/ControllerCadastro.php");
+?>
 <!doctype html>
 <html lang="en">
 
@@ -20,7 +23,7 @@
                 <nav class="navbar bg-light">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">
-                        <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                        <img src="img/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
                         Sistema Web 2.0
 </a>
 </div>
@@ -28,7 +31,7 @@
 </div>
 <div class="row">
     <div class="col">
-    <nav class="navbar navbar-expand-lg bg-dark">
+    <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -50,7 +53,7 @@
 
 <div class="row">
     <div class="col">
-    <nav class="navbar bg-light">
+    <nav class="navbar navbar-light" style="background-color: #8d5ba4;">
   <div class="container-fluid">
       Lista de Usuários
     </a>
@@ -76,35 +79,30 @@
     <th scope="col">Estado</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td> 
-      <button type="button" class="btn btn-dark">Editar</button>
-      <button type="button" class="btn btn-dark">Excluir</button>
-</td>
-
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td> 
-      <button type="button" class="btn btn-dark">Editar</button>
-      <button type="button" class="btn btn-dark">Excluir</button>
-</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td> 
-      <button type="button" class="btn btn-dark">Editar</button>
-      <button type="button" class="btn btn-dark">Excluir</button>
-</td>
-    </tr>
-  </tbody>
+	<tbody id="TableData">
+						<?php
+							$controller = new ControllerCadastro();
+							$resultado = $controller->listar(0);
+							//print_r($resultado);
+							for($i=0;$i<count($resultado);$i++){ 
+						?>
+								<tr>
+									<td scope="col"><?php echo $resultado[$i]['email']; ?></td>
+									<td scope="col"><?php echo $resultado[$i]['endereco']; ?></td>
+									<td scope="col"><?php echo $resultado[$i]['senha']; ?></td>
+									<td scope="col"><?php echo $resultado[$i]['bairro']; ?></td>
+									<td scope="col"><?php echo $resultado[$i]['cep']; ?></td>
+                  <td scope="col"><?php echo $resultado[$i]['cidade']; ?></td>
+                  <td scope="col"><?php echo $resultado[$i]['estado']; ?></td>
+									<td scope="col">
+                  <button type="button" class="btn btn-dark" ><a href=editar.php>Editar</a></button>
+										<button type="button" class="btn btn-outline-primary" style="width: 72px;">Excluir</button>
+									</td>
+								</tr>
+						<?php
+							}
+						?>
+						</tbody>
 </table>
 </div>
 </div>

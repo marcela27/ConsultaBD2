@@ -26,7 +26,7 @@ require_once("controller/ControllerCadastro.php");
 <body> 
 	<div class="container">
 		<div class="row">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-primary col-12">
+			<nav class="navbar navbar-expand-lg navbar-light bg-primary col-12">
 				<a class="navbar-brand" href="#">SISTEMA WEB</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -75,8 +75,8 @@ require_once("controller/ControllerCadastro.php");
                                     <td scope="col"><?php echo $resultado[$i]['cidade']; ?></td>
                                     <td scope="col"><?php echo $resultado[$i]['estado']; ?></td>
 									<td scope="col">
-										<button type="button" class="btn btn-outline-primary" onclick="location.href='editarClientes.php?id=<?php echo $resultado[$i]['id']; ?>'" style="width: 72px;">Editar</button>
-										<button type="button" class="btn btn-outline-primary" onclick="javascript:confirmDelete('excluirClientes.php?id=<?php echo $resultado[$i]['id']; ?>')" style="width: 72px;">Excluir</button>
+										<button type="button" class="btn btn-outline-primary" style="width: 72px;">Editar</button>
+										<button type="button" class="btn btn-outline-primary" style="width: 72px;">Excluir</button>
 									</td>
 								</tr>
 						<?php
